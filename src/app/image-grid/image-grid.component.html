@@ -1,0 +1,13 @@
+<input type="text" placeholder="Search by description" [(ngModel)]="searchTerm" (keyup)="filterImages()"
+    class="search-box">
+<br><br><br>
+<div class="image-grid">
+    <div class="image-container" *ngFor="let image of filteredImages; let i = index" (click)="open(i)">
+        <img src="{{ image.url }}" alt="{{ image.description }}">
+
+    </div>
+
+</div>
+<div class="pagination-wrapper">
+    <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+</div>

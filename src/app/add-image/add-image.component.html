@@ -1,0 +1,11 @@
+<h2>Add Image</h2>
+
+<form (submit)="addImage()">
+  <label for="imageUrl">Image URL:</label>
+  <input type="text" name="imageUrl" [(ngModel)]="imageUrl">
+
+  <label for="description">Description:</label>
+  <input type="text" name="description" [(ngModel)]="description">
+
+  <button type="submit">Add Image</button>
+</form>
